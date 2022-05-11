@@ -1,0 +1,160 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(stm)
+library(tm)
+library(tidyverse)
+```
+# Load the data
+Keep only the states which passed an RPS at some point (this is required to plot the years since enactment -- the $\texttt{STM}$ package can't estimate effects with missing covariates). Remove duplicated paragraphs. If the $\texttt{reduction_rate}$ is null, set it to zero. This is a temporary fix to deal with missing covariate data.  Process the text by removing stopwords, numbers and punctuation, and create STM-usable output.
+```{r}
+data <- read.csv("document_sample.csv")
+```
+
+
+```{r}
+processed <- textProcessor(data$text, metadata = data, stem = T)
+out <- prepDocuments(processed$documents, processed$vocab, processed$meta)
+docs <- out$documents
+vocab <- out$vocab
+meta <- out$meta
+stm.50 <- stm(docs, vocab, 50, data = meta)
+```
+
+
+```{r}
+labels <- labelTopics(stm.50, n = 10)
+write.csv(labels$prob, "topiclabels.csv")
+write.csv(stm.50$theta, "topicproportions.csv")
+```
+
+```{r}
+library(boot)
+library(lubridate)
+
+boot_fn <- function(fitdata, indices) {
+  d <- fitdata[indices,]
+  d <- d[order(d$x),]
+  n = nrow(d)
+  k <- min(ceiling(n/10), n/2)  # Window size
+  kernel <- c(dnorm(seq(0, 3, length.out=k)))
+  kernel <- c(kernel, rep(0, n - 2*length(kernel) + 1), rev(kernel[-1]))
+  kernel <- kernel / sum(kernel)
+  y <- Re(convolve(d$y, kernel))
+  return(y)
+}
+
+moving_window <- function(model, t, years, ci) {
+  o <- order(years)
+  years <- years[o]
+  theta <- model$theta[o,t]
+  fitdata <- data.frame(list(x = years, y = theta))
+  booted <- boot(fitdata, R = 100, statistic = boot_fn)
+  
+  ci <- (1 - ci) / 2
+  
+  conf_top <- apply(booted$t, 2, function(x) quantile(x, 1-ci, na.rm = T))
+  conf_bot <- apply(booted$t, 2, function(x) quantile(x, ci, na.rm = T))
+  
+  return(data.frame(x=years, y=booted$t0, conf_top = conf_top, conf_bot=conf_bot))
+}
+```
+
+
+```{r}
+N <- 8
+sortcond <- exp(stm.100$beta$logbeta[[1]][,vocab=="climat"])
+sortcond <- sortcond * exp(stm.100$beta$logbeta[[1]][,vocab=="energi"])
+sortcond <- sortcond * exp(stm.100$beta$logbeta[[1]][,vocab=="environment"])
+topics <- order(sortcond, decreasing = T)[1:8]
+model <- stm.100
+labels <- labelTopics(model, topics)
+```
+
+
+```{r}
+nrows <- 4 #ceiling(sqrt(N))
+ncols <- 2 #floor(sqrt(N))
+
+# png(file = "SampleClimateTopics.png", 
+#     width = ncols * 4, height = nrows * 2,
+#     units = "in", res = 300)
+
+par(mfrow = c(nrow, ncol))
+par(cex = 0.9)
+par(mar = c(1,1,0,0), oma = c(4,4,0.5,0.5))
+par(mgp = c(2, 0.6, 0))
+
+for (i in 1:N) {
+
+    t <- topics[i]
+    
+    plotdata <- moving_window(model, t, meta$year, 0.95)
+    
+    plot(plotdata$x, plotdata$y, 
+       xlim = c(1995, 2020), ylim = c(0, 0.05), 
+       lwd = 2, col = "darkgrey", type = 'l', 
+       xaxt = 'n', yaxt = 'n',
+       xlab = "year", ylab = "proportion")
+
+    grid()
+    
+    pcol <- rgb(0.1,0.3,0.9,0.1)
+    
+    polygon(
+      c(plotdata$x, rev(plotdata$x)),
+      c(plotdata$conf_top, rev(plotdata$conf_bot)), 
+      col = pcol
+      )
+    
+    
+    #abline(v = c(2015,2016), col = "grey60")
+
+    box(col = "grey60")
+    
+    mtext(str_c("Topic ",t,": "), side = 3, 
+          line = -1.5, adj = 0, cex = 1)
+    mtext(str_c(labels$prob[t,1:4], collapse = " "), 
+          side = 3, line = -2.5, adj = 0, cex = 0.8)
+    
+    if (i %in% seq(1, N-ncols+1, ncols)) {
+            axis(2, 
+                 col = "grey40", 
+                 col.axis = "grey20", 
+                 at = seq(0, 0.05, 0.01),
+                 las = 1)
+    }
+    if (i %in% (N-ncols+1):N) {
+            axis(1, 
+                 col = "grey40", 
+                 col.axis = "grey20", 
+                 at = seq(1995, 2020, 1),
+                 las = 1)
+    }
+}
+
+mtext("Year", side = 1, outer = TRUE, cex = 0.8, line = 2.5)
+mtext("Estimated topic proportion", side = 2, outer = TRUE, cex = 0.8, line = 2.5)
+```
+
+
+```{r}
+climate_topics <- c(9,89,91,21,70,51)
+examples <- list()
+for (k in climate_topics) {
+  examples[str_c("X",k)] <- findThoughts(stm.100, texts = meta$text, n = 1, topics = c(k))$docs[1]
+}
+write.csv(examples, file = "topicExamples.csv")
+```
+
+
+
+```{r}
+ts <- findThoughts(stm.100, texts = meta$text, n = 1, topics = c(k))
+
+
+```
+
