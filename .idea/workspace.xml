@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d419f128-5abf-4c22-8eb9-c337028bc194" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/unprocessed/cccm_employees.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unprocessed/document_sample.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unprocessed/finances.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unprocessed/foundation_employees.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/figure_topic_trends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/figure_yearly_interlocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/interlocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/layered_sbm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/person_ids.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/process_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/process_foundation_interlocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/process_topic_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/figurestyle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cccm-structure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cccm-structure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/analysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/communities-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/development-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1a-checkpoint.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1a-checkpoint.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1b-checkpoint.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1b-checkpoint.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1c-checkpoint.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/fig 1c-checkpoint.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/scrape_people_dev-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/utils-checkpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/years-interlocks-wsbm-checkpoint.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/communities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.ipynb_checkpoints/eins-checkpoint.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.ipynb_checkpoints/metadata-checkpoint.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.ipynb_checkpoints/no-name-checkpoint.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FOUNDATION_METADATA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/foundation_metadata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GRANTS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/foundation_grants.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cccm_interlocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/cccm_interlocks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eins.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/eins.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/intra_network_interlocks.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/intra_network_interlocks.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/metadata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/cccm_metadata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/no-name.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/officers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/cccm_officers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/officers.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/cccm_officers.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/yearlyrevenue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/yearly_revenue.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/~$intra_network_interlocks.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/development.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1a.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1b.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1c.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fig 1c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/.ipynb_checkpoints/cccm_communities-checkpoint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nx2gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/nx2gt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/.ipynb_checkpoints/topiclabels-checkpoint.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/.ipynb_checkpoints/topiclabels-checkpoint.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/D2004.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/D2008.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/D2012.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/D2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/D2020.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/R2004.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/R2008.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/R2012.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/party_platforms/R2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/topiclabels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/topiclabels.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stm/data/topicproportions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/unprocessed/topicproportions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/years-interlocks-wsbm.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SZ44DgDmCnSJiCwSkrRoHes3FJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/unprocessed" />
+      <recent name="$PROJECT_DIR$/stm/data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/unprocessed" />
+      <recent name="$PROJECT_DIR$/code/utils" />
+      <recent name="$PROJECT_DIR$/code" />
+      <recent name="$PROJECT_DIR$/figures" />
+      <recent name="$PROJECT_DIR$/data/processed" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.figure_yearly_interlocks">
+    <configuration name="figure_yearly_interlocks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cccm-structure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/figure_yearly_interlocks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="layered_sbm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cccm-structure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/layered_sbm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.figure_yearly_interlocks" />
+        <item itemvalue="Python.layered_sbm" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d419f128-5abf-4c22-8eb9-c337028bc194" name="Changes" comment="" />
+      <created>1689340575851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689340575851</updated>
+      <workItem from="1689340577562" duration="29246000" />
+      <workItem from="1689452786932" duration="1312000" />
+      <workItem from="1691686342069" duration="583000" />
+      <workItem from="1691686975098" duration="9488000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cccm_structure$process_data.coverage" NAME="process_data Coverage Results" MODIFIED="1689374831511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/cccm_structure$layered_sbm.coverage" NAME="layered_sbm Coverage Results" MODIFIED="1691695895044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/cccm_structure$network.coverage" NAME="network Coverage Results" MODIFIED="1689376673575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/cccm_structure$people_ids.coverage" NAME="people_ids Coverage Results" MODIFIED="1689453843113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/cccm_structure$interlocks.coverage" NAME="interlocks Coverage Results" MODIFIED="1691691874672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/cccm_structure$figure_yearly_interlocks.coverage" NAME="figure_yearly_interlocks Coverage Results" MODIFIED="1691695984845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/cccm_structure$topic.coverage" NAME="topic Coverage Results" MODIFIED="1689382164422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/cccm_structure$network__1_.coverage" NAME="network (1) Coverage Results" MODIFIED="1691693450641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+  </component>
+</project>
