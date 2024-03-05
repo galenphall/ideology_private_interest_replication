@@ -9,7 +9,7 @@ from scripts.utils import utils  # Ensure correct imports
 os.chdir('..')
 
 # Load data
-intra_network_interlocks = pd.read_excel('data/unprocessed/intra_network_interlocks.xlsx')
+intra_network_interlocks = pd.read_excel('data/unprocessed/validated_cccm_interlocks.xlsx')
 intra_network_interlocks.to_csv('data/unprocessed/intra_network_interlocks.csv', index=False)
 
 # Define entries to remove

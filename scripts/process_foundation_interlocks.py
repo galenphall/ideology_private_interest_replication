@@ -21,7 +21,7 @@ name_to_ein = eins.set_index('org').ein.to_dict()
 fdn_namemap = {
     'ADAM  MEYERSON': 1,
     'ALAN T RUSSELL': 2,
-    'ALEJANDRA  CHAFUEN': 3,
+    'ALEJANDRA  CHAFUEN': 4,
     'ALEJANDRO  CHAFUEN': 4,
     'ALEJANDRO A CHAFUEN': 4,
     'ANTHONY  WOODLIEF': 5,
@@ -151,8 +151,14 @@ fdn_namemap = {
 }
 
 
-for k in fdn_namemap:
+for k in [*fdn_namemap.keys()]:
     fdn_namemap[normalize_name(k)] = fdn_namemap[k]
+
+pd.Series(fdn_namemap).to_csv('data/processed/fdn_namemap.csv')
+
+fdn_standard_name = {
+    v: k for k, v in fdn_namemap.items()
+}
 
 fdn_interlocks['PERSON_ID'] = fdn_interlocks.RECIPIENT_PERSON.map(fdn_namemap)
 fdn_interlocks = fdn_interlocks[fdn_interlocks.Correct]
@@ -161,9 +167,6 @@ fdn_interlocks['RECIPIENT_EIN'] = fdn_interlocks.RECIPIENT.map(name_to_ein)
 
 employees = pd.read_csv('data/processed/combined_employees.csv')
 
-namedb = {}
-
-for name, ein, year in employees[['name', 'ein', 'year']].values:
-    if normalize_name(name) in fdn_namemap:
-        namedb[(name, ein, year)] = fdn_namemap[normalize_name(name)]
-
+employees = employees[employees.name.notnull()]
+employees['name_norm'] = employees.name.apply(normalize_name)
+employees['name_norm'] = employees.name_norm.apply(lambda x: fdn_standard_name[fdn_namemap[x]] if x in fdn_namemap else x)

@@ -1,5 +1,4 @@
 from infomap import Infomap
-import igraph as ig
 import numpy as np
 import networkx as nx
 import re
